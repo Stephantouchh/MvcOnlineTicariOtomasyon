@@ -16,7 +16,7 @@
     </tr>
     @foreach (var x in Model)
     {
-        <tr>
+        <tr> 
             <td>@x.FaturaSeriNo @x.FaturaSıraNo</td>
             <td>@Convert.ToDateTime(x.Tarih).ToString("dd/MM/yyyy")</td>
             <td>@x.Saat</td>
