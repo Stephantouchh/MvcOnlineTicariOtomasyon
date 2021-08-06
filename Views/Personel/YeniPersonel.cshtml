@@ -1,0 +1,43 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Sınıflar.Personel
+
+@{
+    ViewBag.Title = "YeniPersonel";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Personel Ekleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("YeniPersonel", "Personel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <form class="form-group" method="post">
+        <label>Personel Adını Giriniz!</label>
+        @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.PersonelAd, "", new { @style = "color:red" })
+        <br />
+        <label>Personel Soyadını Giriniz!</label>
+        @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.PersonelSoyad, "", new { @style = "color:red" })
+        <br />
+        <label>Personel Mailini Giriniz!</label>
+        @Html.TextBoxFor(x => x.PersonelMail, new { @class = "form-control" })
+        <br />
+        <label>Personel Görselini Giriniz!</label>
+        <br />
+        <input type="file" name="PersonelGorsel" />
+        <br />
+        @*@Html.TextBoxFor(x => x.PersonelGorsel, new { @class = "form-control" })*@
+        <br />
+        <label>Personel Şehrini Giriniz!</label>
+        @Html.TextBoxFor(x => x.PersonelSehir, new { @class = "form-control" })
+        <br />
+        <label>Personel Telefonunu Giriniz!</label>
+        @Html.TextBoxFor(x => x.PersonelTelefon, new { @class = "form-control" })
+        <br />
+        <label>Personel Departmanını Giriniz!</label>
+        @Html.DropDownListFor(x => x.Departmanid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-info">Kaydet</button>
+    </form>
+}
+

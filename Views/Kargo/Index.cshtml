@@ -1,0 +1,40 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Sınıflar
+@model List<KargoDetay>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+@using (Html.BeginForm("Index", "Kargo", FormMethod.Get))
+{
+    <p>
+        Kargo Takip Numarası: @Html.TextBox("p")
+        <input type="submit" value="Ara" style="background-color:blue; color:white;" />
+    </p>
+}
+<h2>Kargolar</h2>
+<table class="table table-striped" style="margin-top:20px;">
+    <tr style="background-color:rgb(252, 178, 22)">
+        <th>PERSONEL</th>
+        <th>ALICI</th>
+        <th>TARİH</th>
+        <th>TAKİP KODU</th>
+        @*<th>SİL</th>
+            <th>GÜNCELLE</th>*@
+        <th>DETAYLAR</th>
+        <th>QR KOD</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Personel</td>
+            <td>@x.Alici</td>
+            <td>@Convert.ToDateTime(x.Tarih).ToString("dd/MM/yyyy")</td>
+            <td>@x.TakipKodu</td>
+            @*<td><a href="/Kargo/DepartmanSil/@x.KargoDetayid" class="btn btn-danger">Sil</a></td>*@
+            <td><a href="/Kargo/KargoTakip/@x.TakipKodu" class="btn btn-group" style="background-color:lightcoral; color:white;">Detaylar</a></td>
+            <td><a href="/Kargo/Index2/@x.KargoDetayid" class="btn btn-success">Qr Kod</a></td>
+        </tr>
+    }
+</table>
+<a href="/Kargo/YeniKargo/" class="btn btn-outline-primary">Yeni Kargo Girişi</a>

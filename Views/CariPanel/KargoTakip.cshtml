@@ -1,0 +1,36 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Sınıflar
+@model List<KargoDetay>
+@{
+    ViewBag.Title = "KargoTakip";
+    Layout = "~/Views/Shared/_CariLayout.cshtml";
+}
+
+<br />
+@using (Html.BeginForm("KargoTakip", "CariPanel", FormMethod.Get))
+{
+    <p>
+        Kargo Takip Numarası: @Html.TextBox("p")
+        <input type="submit" value="Ara" style="background-color:blue; color:white;" />
+    </p>
+}
+<table class="table table-hover" style="margin-top:20px;">
+    <tr>
+        <th>PERSONEL</th>
+        <th>ALICI</th>
+        <th>TARİH</th>
+        <th>TAKİP KODU</th>
+        <th>DETAYLAR</th>
+        <th>QR KOD</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Personel</td>
+            <td>@x.Alici</td>
+            <td>@Convert.ToDateTime(x.Tarih).ToString("dd/MM/yyyy")</td>
+            <td>@x.TakipKodu</td>
+            <td><a href="/CariPanel/CariKargoTakip/@x.TakipKodu" class="btn btn-group" style="background-color:lightcoral; color:white;">Detaylar</a></td>
+            <td><a href="/CariPanel/KargoQr/@x.KargoDetayid" class="btn btn-success">Qr Kod</a></td>
+        </tr>
+    }
+</table>

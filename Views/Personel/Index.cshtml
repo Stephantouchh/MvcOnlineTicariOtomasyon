@@ -1,0 +1,36 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Sınıflar
+@model List<Personel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<table class="table table-striped" style="margin-top:20px;">
+    <tr style="background-color:rgb(252, 178, 22)">
+        <th>#</th>
+        <th>AD</th>
+        <th>SOYAD</th>
+        <th>DEPARTMAN</th>
+        @*<tH>SİL</tH>*@
+        <tH>GÜNCELLE</tH>
+        <tH>SATIŞLAR</tH>
+        <th>GÖRSEL</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+<tr>
+    <td>@x.Personelid</td>
+    <td>@x.PersonelAd</td>
+    <td>@x.PersonelSoyad</td>
+    <td>@x.Departman.DepartmanAd</td>
+    @*<td><a href="/Personel/PersonelSil/@x.Personelid" class="btn btn-danger">Sil</a></td>*@
+    <td><a href="/Personel/PersonelGetir/@x.Personelid" class="btn btn-success">Güncelle</a></td>
+    <td><a href="/Departman/DepartmanPersonelSatis/@x.Personelid" class="btn btn-group" style="background-color:lightcoral; color:white;">Detaylar</a></td>
+    <td>
+        <img src="@x.PersonelGorsel" style="width:50px; height:50px;" />
+    </td>
+</tr>
+    }
+</table>
+<a href="/Personel/YeniPersonel/" class="btn btn-outline-primary">Yeni Personel Ekle</a>

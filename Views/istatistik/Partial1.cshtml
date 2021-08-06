@@ -1,0 +1,132 @@
+﻿@model IEnumerable<MvcOnlineTicariOtomasyon.Models.Sınıflar.SinifGrup2>
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Departman-Personel Sayıları</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body p-0">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Departman</th>
+                    <th>Progress Bar</th>
+                    <th style="width: 40px">Sayı</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{ int sirano = 0;}
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td>@{sirano++;} @sirano.</td>
+                        <td>@x.Departman</td>
+                        <td>
+                            @if (x.Sayi == 1)
+                            {
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                                </div>
+                            }
+                            @if (x.Sayi == 2)
+                            {
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar bg-warning" style="width: 70%"></div>
+                                </div>
+                            }
+                            @if (x.Sayi == 3)
+                            {
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar bg-success" style="width: 90%"></div>
+                                </div>
+                            }
+                            @if (x.Sayi == 4)
+                            {
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar bg-black" style="width: 90%"></div>
+                                </div>
+                            }
+                            @if (x.Sayi == 5)
+                            {
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar bg-cyan" style="width: 90%"></div>
+                                </div>
+                            }
+                            @if (x.Sayi == 6)
+                            {
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar bg-fuchsia" style="width: 90%"></div>
+                                </div>
+                            }
+                            @if (x.Sayi == 7)
+                            {
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar bg-indigo" style="width: 90%"></div>
+                                </div>
+                            }
+                            @if (x.Sayi == 8)
+                            {
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar bg-lime" style="width: 90%"></div>
+                                </div>
+                            }
+                            @if (x.Sayi == 9)
+                            {
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar bg-maroon" style="width: 90%"></div>
+                                </div>
+                            }
+                            @if (x.Sayi == 10)
+                            {
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar bg-orange" style="width: 90%"></div>
+                                </div>
+                            }
+                        </td>
+                        @if (x.Sayi == 1)
+                        {
+                            <td><span class="badge bg-blue">@x.Sayi</span></td>
+                        }
+                        @if (x.Sayi == 2)
+                        {
+                            <td><span class="badge bg-warning">@x.Sayi</span></td>
+                        }
+                        @if (x.Sayi == 3)
+                        {
+                            <td><span class="badge bg-success">@x.Sayi</span></td>
+                        }
+                        @if (x.Sayi == 4)
+                        {
+                            <td><span class="badge bg-black">@x.Sayi</span></td>
+                        }
+                        @if (x.Sayi == 5)
+                        {
+                            <td><span class="badge bg-cyan">@x.Sayi</span></td>
+                        }
+                        @if (x.Sayi == 6)
+                        {
+                            <td><span class="badge bg-fuchsia">@x.Sayi</span></td>
+                        }
+                        @if (x.Sayi == 7)
+                        {
+                            <td><span class="badge bg-indigo">@x.Sayi</span></td>
+                        }
+                        @if (x.Sayi == 8)
+                        {
+                            <td><span class="badge bg-lime">@x.Sayi</span></td>
+                        }
+                        @if (x.Sayi == 9)
+                        {
+                            <td><span class="badge bg-maroon">@x.Sayi</span></td>
+                        }
+                        @if (x.Sayi == 10)
+                        {
+                            <td><span class="badge bg-orange">@x.Sayi</span></td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

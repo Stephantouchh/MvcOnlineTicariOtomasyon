@@ -1,0 +1,28 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Sınıflar
+@model List<Departman>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<table class="table table-striped" style="margin-top:20px;">
+    <tr style="background-color:rgb(252, 178, 22)">
+        <th>#</th>
+        <th>DEPARTMAN ADI</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+        <th>DETAYLAR</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Departmanid</td>
+            <td>@x.DepartmanAd</td>
+            <td><a href="/Departman/DepartmanSil/@x.Departmanid" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Departman/DepartmanGetir/@x.Departmanid" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Departman/DepartmanDetay/@x.Departmanid" class="btn btn-group" style="background-color:lightcoral; color:white;">Detaylar</a></td>
+        </tr>
+    }
+</table>
+<a href="/Departman/YeniDepartman/" class="btn btn-outline-primary">Yeni Departman Ekle</a>

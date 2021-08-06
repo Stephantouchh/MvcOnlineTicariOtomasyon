@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "KargoQr";
+    Layout = "~/Views/Shared/_CariLayout.cshtml";
+}
+
+<br />
+<div>
+    @using (Html.BeginForm("KargoQr", "CariPanel", FormMethod.Post))
+    {
+        <input type="text" name="Kod" value="@ViewBag.dgr2" />
+        <input type="submit" value="QR Oluştur" />
+    }
+    <br />
+    @if (ViewBag.karekodimage != null)
+    {
+        <img src="@ViewBag.karekodimage" alt="" style="width:400px; height:400px;" />
+    }
+</div>

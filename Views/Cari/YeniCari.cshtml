@@ -1,0 +1,39 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Sınıflar.Cariler
+
+@{
+    ViewBag.Title = "YeniCari";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Cari Ekleme Sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    <label>Cari Adını Giriniz!</label>
+    @Html.TextBoxFor(x => x.CariAd, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CariAd, "", new { @style = "color:red" })
+    <br />
+    <label>Cari Soyadını Giriniz!</label>
+    @Html.TextBoxFor(x => x.CariSoyad, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CariSoyad, "", new { @style = "color:red" })
+    <br />
+    <label>Cari Mesleğini Giriniz!</label>
+    @Html.TextBoxFor(x => x.CariMeslek, new { @class = "form-control" })
+    <br />
+    <label>Cari Şehrini Giriniz!</label>
+    @Html.TextBoxFor(x => x.CariSehir, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CariSehir, "", new { @style = "color:red" })
+    <br />
+    <label>Cari Mailini Giriniz!</label>
+    @Html.TextBoxFor(x => x.CariMail, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CariMail, "", new { @style = "color:red" })
+    <br />
+    <label>Cari Telefonunu Giriniz!</label>
+    @Html.TextBoxFor(x => x.CariTelefon, new { @class = "form-control" })
+    <br />
+    <label>Cari Görselini Giriniz!</label>
+    @Html.TextBoxFor(x => x.CariGorsel, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+
