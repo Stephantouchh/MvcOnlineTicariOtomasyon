@@ -80,8 +80,8 @@ C:\Users\by\source\repos\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\E
 C:\Users\by\source\repos\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\EntityFramework.SqlServer.dll
 C:\Users\by\source\repos\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\EntityFramework.xml
 C:\Users\by\source\repos\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\EntityFramework.SqlServer.xml
-C:\Users\by\source\repos\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csprojAssemblyReference.cache
 C:\Users\by\source\repos\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.dll
 C:\Users\by\source\repos\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.Mvc.dll
 C:\Users\by\source\repos\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.xml
 C:\Users\by\source\repos\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\bin\PagedList.Mvc.xml
+C:\Users\by\source\repos\MvcOnlineTicariOtomasyon\MvcOnlineTicariOtomasyon\obj\Debug\MvcOnlineTicariOtomasyon.csproj.AssemblyReference.cache
